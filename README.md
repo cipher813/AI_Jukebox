@@ -1,7 +1,6 @@
 # AI Jukebox
 The AI Jukebox takes as input a collection of midi files and outputs AI generated music.  The underlying model is a bidirectional LSTM recurrent neural network which maps the latent space of the collection of files and then samples from this underlying structure.  
 
-**Music Samples** 
 See music samples on [SoundCloud.](https://soundcloud.com/cipher813)
 
 The AI Jukebox works in two phases: Training and Evaluation.  

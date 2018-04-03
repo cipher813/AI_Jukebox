@@ -10,14 +10,14 @@ from music21 import instrument
 
 import functions as fxn
 
-midi_files = '../../data/Music/Tadpole/**/*.MID'
-# midi_files = '../../audio_output/2_4L_201803290654-100-lstm_midi.mid' # for testing
-# midi_files = '../../data/Music/MidiWorld/Dance/*.mid'
+# midi_files = '../../data/Music/Tadpole/**/*.MID'
+# midi_files = '../audio_output/Dance/2_10A_201804011556-200-lstm_midi.mid' # for testing
+midi_files = '../../data/Music/MidiWorld/Classical/*.mid'
 # midi_files = '../../data/Music/FinalFantasy/*.mid'
 
 timestamp = re.sub(r'[-: ]','',str(datetime.now()).split('.')[0])[:-2]
-output_name = midi_files.split('/')[-3]
-total_epochs = 200
+output_name = midi_files.split('/')[-2]
+total_epochs = 50
 batch_size = 512 # 128 for local; 512 for AWS
 sequence_length = 200 # the LSTM RNN will consider this many notes
 notes_generated = 500
