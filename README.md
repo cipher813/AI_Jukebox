@@ -1,33 +1,36 @@
-# LSTM Music Generator
-Consists of the following files, each saved under their version number in the models folder:
+# AI Jukebox
+The AI Jukebox takes as input a collection of midi files and outputs AI generated music.  The underlying model is a bidirectional LSTM recurrent neural network which maps the latent space of the collection of files and then samples from this underlying structure.  
 
-**Run files**
+**Music Samples** 
+See music samples on [SoundCloud.](https://soundcloud.com/cipher813)
+
+The AI Jukebox works in two phases: Training and Evaluation.  
+
 The model takes in a set of midi music files and generates a unique note/chord pattern in midi output.  This is processed in two phases: (1) Midi input files to trained weights, and (2) Trained weights to midi generated file.  
 
 Midis -> weights -> midi
 
-`midis_to_weights.py` takes in set of midi files and trains weights.
-`weights_to_midi.py` takes the trained weights and generated a unique midi file.
+The model consists of two files:
 
-**Support files:**
-`processing.py` contains functions that process notes/chords from midi to embedded numeric format.  
-`neural_network.py` contains the neural network which trains the weights and generates the midi output by "predicting" notes/chords.  
-`generate.py` contains functions which create the midi output.
-`utils.py` contains a logging function for process tracking.  
+`functions.py` contains the internal structure of the model for both training and evaluation stages.  
+`run.py` executes the model from beginning of training to end of evaluation.  
+
+The model default is to generate a weight file at the end of every epoch.  Once you have a weight file and the input notes file generated at the beginning of training, you can convert these files into a midi of generated music.  
+
+### Training
+
+The training phase is quite time consuming; this is where the model maps the latent space within the collection of music.  A weight file is generated at the end of this phase.  
+
+### Evaluation
+
+Utilizing the weight file generated from the training phase, the model will then "predict" a sequence of notes which represents a sample from the internal structure mapped.  A midi file is generated as output.  
+
+To run the model from beginning of training phase to end of evaluation phase, simply navigate to the model folder and then run the program by typing `python run.py`
+
+If you have already created weight files from the training phase (partially trained weights will work as well), you can generate a midi file from the weight file.  To do so, simple open the weights_to_midi.ipynb jupyter notebook and input the weight filepath and input notes filepath accordingly.  Input notes file will be created when the model is first trained.  
 
 
-**To run:**
-
-Navigate to the model files in within the model/<version number> filepath.
-
-First, type `python midis_to_weights.py` to train by inputting midi files and outputting a trained set of weights.
-
-Once you have the trained weights file, edit `weights_to_midi.py` with filepaths to the weights file and notes file produced as output to the training phase.  Then run this process in terminal by typing `python weights_to_midi.py`
-
-This will then output the generated midi file.  
-
-
-**Resources:**
+### Resources
 Nayebi, Aran. ["GRUV: Algorithmic Music Generation using Recurrent Neural Networks."](https://www.arxiv.org). Stanford University. 2015.  
 
 Skúli, Sigurður.  ["How to Generate Music using a LSTM Neural Network in Keras."](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5). December 7, 2017.
