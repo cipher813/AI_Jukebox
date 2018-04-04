@@ -1,6 +1,6 @@
 # AI Jukebox
 
-_See blog on [Medium](https://medium.com/@cipher813) and music samples on [SoundCloud.](https://soundcloud.com/cipher813)_
+_See blog on [Medium](https://medium.com/@cipher813) and music samples on [SoundCloud.](https://soundcloud.com/bcm822)_
 
 The AI Jukebox takes as input a collection of midi files and outputs AI generated music.  The underlying model is a bidirectional LSTM recurrent neural network which maps the latent space of the collection of files and then samples from this underlying structure.  
 
@@ -38,14 +38,14 @@ The model default is to generate a weight file at the end of every epoch.  Once 
 
 Goodfellow, Ian. ["Deep Learning."](http://www.deeplearningbook.org/) MIT Press. 2016.
 
-Brownlee, Jason. ["Stacked LSTM Networks."](https://machinelearningmastery.com/stacked-long-short-term-memory-networks/). August 18, 2017.
+Brownlee, Jason. ["Stacked LSTM Networks."](https://machinelearningmastery.com/stacked-long-short-term-memory-networks/) August 18, 2017.
 
-Brownlee, Jason. ["Understand the Difference Between Return Sequences and Return States for LSTMs in Keras."](https://machinelearningmastery.com/return-sequences-and-return-states-for-lstms-in-keras/). October 24, 2017.   
+Brownlee, Jason. ["Understand the Difference Between Return Sequences and Return States for LSTMs in Keras."](https://machinelearningmastery.com/return-sequences-and-return-states-for-lstms-in-keras/) October 24, 2017.   
 
-Dorsey, Brannon.  ["Using Machine Learning to Create New Melodies."](https://brangerbriz.com/blog/using-machine-learning-to-create-new-melodies/). May 10, 2017.
+Dorsey, Brannon.  ["Using Machine Learning to Create New Melodies."](https://brangerbriz.com/blog/using-machine-learning-to-create-new-melodies/) May 10, 2017.
 
-Nayebi, Aran. ["GRUV: Algorithmic Music Generation using Recurrent Neural Networks."](https://www.arxiv.org). Stanford University. 2015.  
+Nayebi, Aran. ["GRUV: Algorithmic Music Generation using Recurrent Neural Networks."](https://www.arxiv.org) Stanford University. 2015.  
 
-Skúli, Sigurður.  ["How to Generate Music using a LSTM Neural Network in Keras."](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5). December 7, 2017.
+Skúli, Sigurður.  ["How to Generate Music using a LSTM Neural Network in Keras."](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5) December 7, 2017.
 
 Olah, Christopher. ["Understanding LSTM Networks."](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) Colah's Blog. August 27, 2015.
