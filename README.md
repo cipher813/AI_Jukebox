@@ -32,6 +32,7 @@ If you have already created (full or partially-trained) weight files from the tr
 The model default is to generate a weight file at the end of every epoch.  Once you have a weight file and the input notes file generated at the beginning of training, you can convert these files into a midi of generated music.  
 
 
+
 ### Resources
 
 [“Magenta.”](https://magenta.tensorflow.org/) Tensorflow.
